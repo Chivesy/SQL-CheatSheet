@@ -46,6 +46,18 @@ Table -- a collection of data organized into rows and columns.
 | MIN()         | The smallest value                                       | SELECT MIN(downloads) FROM fake_apps;                                       |
 | AVG()         | The average of the values in a column                    | SELECT AVG(price) FROM fake_apps;                                           |
 | ROUND()       | Round the values in the column                           | SELECT ROUND(price, 0) FROM fake_apps;  (rounds column to number of decimal provided) |
+| GROUP BY      | Group by a certain characteristic                        | SELECT category, SUM(downloads) FROM fake_apps GROUP BY category;           |
+| HAVING        | Limit results of a query based off a aggregate property  | SELECT price, ROUND(AVG(downloads)), COUNT(*) FROM fake_apps GROUP BY price HAVING COUNT(price) > 10; |
+
+## Multiple Tables
+- JOIN will combine rows from different tables if the join condition is true.  
+- LEFT JOIN will return every row in the left table, and if the join condition is not met, NULL values are used to fill in the columns from the right table.  
+- Primary key is a column that serves a unique identifier for the rows in the table.  
+- Foreign key is a column that contains the primary key to another table.  
+- CROSS JOIN lets us combine all rows of one table with all rows of another table.  
+- UNION stacks one dataset on top of another.  
+- WITH allows us to define one or more temporary tables that can be used in the final query.  
+
 
 ## Constraints  
 CREATE TABLE celebs (  
