@@ -36,7 +36,17 @@ Table -- a collection of data organized into rows and columns.
 | DESC          | Used with ORDER BY to sort in descending order           | SELECT * FROM movies WHERE imbd_rating > 8 ORDER BY year DESC;              |
 | ASC           | Used with ORDER BY to sort in descending order           | SELECT * FROM movies WHERE imbd_rating > 8 ORDER BY year ASC;               |
 | LIMIT         | Used to limit the number of results returned from query  | SELECT * FROM movies LIMIT 10;                                              |
- 
+
+## Aggregate Functions
+| Function      | Purpose                                                  | Example                                                                     |
+| ------------- | -------------                                            | -----                                                                       |
+| COUNT()       | Count the number of rows                                 | SELECT COUNT(*) FROM fake_apps WHERE price = 0;                             |
+| SUM()         | The sum of the values in a column                        | SELECT SUM(downloads) FROM fake_apps;                                       |
+| MAX()         | The largest value                                        | SELECT MAX(downloads) FROM fake_apps;                                       |
+| MIN()         | The smallest value                                       | SELECT MIN(downloads) FROM fake_apps;                                       |
+| AVG()         | The average of the values in a column                    | SELECT AVG(price) FROM fake_apps;                                           |
+| ROUND()       | Round the values in the column                           | SELECT ROUND(price, 0) FROM fake_apps;  (rounds column to number of decimal provided) |
+
 ## Constraints  
 CREATE TABLE celebs (  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   id INTEGER PRIMARY KEY,   
