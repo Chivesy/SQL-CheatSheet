@@ -5,6 +5,21 @@ SQL -- Structured Query Language
 ## Basic Vocab
 Relational database -- database that organizes information into one or more tables.  
 Table -- a collection of data organized into rows and columns.    
+Entity -- Person, place, thing, or event. Distinguishable, unique, and distinct.  
+Attribute -- A characteristic of an entity.  
+Relationship -- Describes association among entities
+* One-to-many -- Customer to invoices  
+* Many-to-many -- Student to classes  
+* One-to-one -- Manager to store
+
+Primary Key -- A column (or set of columns) whose values uniquely identify every row in a table.   
+Foreign Key -- One or more columns that can be used together to identify a single row in another table.  
+
+## Main Commands
+SELECT -- Needed to query/search for data from the database.  
+FROM -- Indicates the table where the search will be made.  
+WHERE -- Its used to dfine the rows, in which the search will be carried.  
+ORDER BY -- This is the only way to sort the results in SQL. Otherwise retured in random order.  
   
 ## Statement Commands  
 
